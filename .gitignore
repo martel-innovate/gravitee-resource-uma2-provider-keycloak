@@ -1,5 +1,8 @@
 # Compiled class file
 *.class
+target
+.settings
+.vertx
 
 # Log file
 *.log
