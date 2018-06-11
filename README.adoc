@@ -1,0 +1,44 @@
+= Gravitee.io - Keyloak UMA2 Adapter Resource
+
+== Description
+
+The Keycloak adapter resource supports the UMA 2 workflow for authorisation
+to access resources.
+
+== Configuration
+
+You can configure the resource with the following options :
+
+|===
+|Property |Required |Description |Type |Default
+
+.^|keycloakConfiguration
+^.^|X
+|Keycloak OIDC JSON client adapter configuration
+^.^|string
+^.^|-
+
+|===
+
+
+[source, json]
+.Configuration example
+----
+{
+    "configuration" : {
+        "keycloakConfiguration":
+            "{
+                "realm": "gravitee",  
+                "realm-public-key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlFGvVjpMJ8Q+MtP4uZmU9n2PoqF58BzVb6cyNKBg3sFM1QSyc9Un+KeVmrPYywu5HzwQRsPfSc4sHLRQmctv0zw8VcItuyCLoCecAAMVfSGeI3AbOQzC9j8leXENSI3byjQYl8qfwFUME/VR6wgpO3g+HXf+KDygByOAKsKm1zTveY3UrZbeHIjYFvqWDlzGS3oN2/FdneqaQbeOkpGbFKWYRZkWtIXhXtKP9DTr44iD784XVdLiLjo40WP2qM7UI6+0Gj5/eCB6b+m/EMBLv1CeYfKvAviHMEq2ip/7k3fVOP5v3EpWTWH9iy/tz+MrP1kJaRaB7Wb+HT4viZqAjQIDAQAB",
+                "auth-server-url": "http://localhost:8080/auth",
+                "ssl-required": "external",
+                "resource": "gravitee",
+                "credentials": {  
+                    "secret": "f1c9ff64-abcf-4671-9ddb-4fe4a172390d"
+                },
+                "confidential-port": 0,
+                "policy-enforcer": {}
+            }"
+        }
+}
+----
